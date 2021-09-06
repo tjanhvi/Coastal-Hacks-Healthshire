@@ -1,0 +1,297 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.text {
+font-size: 8px;
+font-family: "ARIAL", Times, serif;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/123.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0% 75%, 0 0);
+  position: relative;
+}
+
+#myVideo {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+
+.container {
+  position: relative;
+}
+
+.container video {
+  position: relative;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.brishti {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/hii.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0% 75%, 0 0);
+  position: relative;
+}
+
+.header-section {
+  width: 100%;
+  height: inherit;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.center-div {
+  margin-top: 150px;
+}
+
+.spacing {
+  letter-spacing: 4px;
+}
+
+.boxes {
+  width: 100%;
+  height: top;
+  margin: 100px 0;
+}
+
+.box {
+  text-align: center;
+  background: #fff;
+  border: medium none;
+  padding: 50px;
+  border-radius: 3px;
+  transition: 0.3sec;
+}
+
+.box:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+  transform: translateY(-20px);
+}
+
+i {
+  color: #2fcdd0;
+}
+
+.offers {
+  background-color: #f7f7f9;
+  padding: 50px 0;
+  margin-bottom: 50px;
+}
+
+.service {
+  font-size: 0.9rem;
+  margin: 20px 0 15px 0;
+  line-height: 1.1;
+  font-weight: bold;
+  word-spacing: 4px;
+}
+
+.service-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress {
+  height: 0.6rem !important;
+  margin-bottom: 25px !important;
+}
+
+.offer-details {
+  margin: 25px 0;
+}
+
+.pricing {
+  width: 100%;
+  height: 100vh;
+  padding: 50px;
+  position: relative;
+}
+
+.pricing:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  z-index: -1;
+}
+
+.card {
+  margin-top: 20px;
+  transition: 0.4s ease;
+}
+
+.card-header {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1;
+  background: #fff !important;
+}
+
+.card-body {
+  padding: 30px 0 !important;
+}
+
+.card-body li {
+  margin: 10px 0;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+  transform: translateY(-20px);
+}
+
+.second-card {
+  transform: translateY(-20px);
+}
+
+.contactus {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  padding: 80px 0;
+  position: relative;
+  margin-top: 150px;
+}
+
+.contactus:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  z-index: -1;
+  background: linear-gradient(145deg, #16c9f6 55%, rgb(241, 238, 238) 0%);
+}
+
+.newsletter {
+  width: 100%;
+  height: auto;
+  margin: 80px auto;
+}
+
+.news-input {
+  border-radius: 100px 0px 0px 100px !important;
+  min-width: 150px;
+  min-height: 45px;
+}
+
+.input-group-text {
+  border-radius: 0 100px 100px 0 !important;
+}
+
+.input-group-text:hover {
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  padding: 70px 0 20px 0;
+  position: relative;
+  background: #2DD892;
+ 
+}
+
+.footer p {
+  color: #fff;
+}
+
+.footer li a {
+  color: black;
+}
+
+.footer h3 {
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+  color: black;
+  z-index: 99;
+}
+
+#myBtn:hover {
+  cursor: pointer;
+}
+
+.social-icon {
+  cursor: pointer;
+  margin: 20px 10px;
+}
+
+#socialAccounts {
+  text-align: center;
+}
+
+/* media query */
+@media only screen and (max-width:1000px) {
+  .navbar {
+    text-align: center;
+  }
+
+  .header {
+    height: 90vh;
+  }
+
+  .pricing {
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .second-card {
+    transform: translateY(0px);
+    margin: 30px 0 !important;
+  }
+
+  .offer-details {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}

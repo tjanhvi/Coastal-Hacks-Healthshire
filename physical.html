@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Wellnes</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">"> -->
+
+    <!-- custom css file link  -->
+
+    <link rel="stylesheet" href="physical.css">
+
+
+
+</head>
+
+
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header>
+
+        <a href="#" class="logo"><span>PHYSICAL WELLNESS</span></a>
+
+        <div id="menu" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+    <ul>
+        <li><a class="active" href="index.html">HOME</a></li>
+        <li><a href="social/index.html">Social</a></li>
+        <li><a href="fitness website/mental.html">Mental</a></li>
+        <!-- <li><a href="#trainer">YOGA</a></li> -->
+    </ul>
+</nav>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <h1>it's never too easy but <br> you have to try</h1>
+
+        <a href="#service"><button class="btn">get started</button></a>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- BMI calculator section start  -->
+
+    <!-- <section class="service" id="about"> -->
+    <section class="service" id="service">
+
+        <h1 class="heading">Body Mass Index</h1>
+        <div class="bmi">
+            <div class="login-page">
+                <div onclick="bmi()" class="form">
+                    <form class="register-form">
+                        <input type="text" id="num-one" placeholder="Enter Your weight in Kg" />
+                        <input type="text" id="num-two" placeholder="Enter Your Height in cm ">
+                        <!-- <button   class="btn">Calculate</button> -->
+
+                    </form>
+                    <!-- <button onclick="bmi()" class="btn">Calculate BMI</button> -->
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            </form>
+            </form>
+            <div class="login-page">
+                <div class="form" id="calc">
+                    <img id="myImg" src="images/fit.png" alt="123" width=25%>
+                    <div class="bmi_result" id="result"></div>
+                    <div style="text-align:center;">
+                        <h2>BMI</h2>
+
+                        <h2 id="add-sum"></h2>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        </setion>
+
+        <script>
+            function bmi() {
+
+                var numOne = document.getElementById('num-one');
+                var numTwo = document.getElementById('num-two');
+                var addSum = document.getElementById('add-sum');
+                numOne.addEventListener('input', add);
+                numTwo.addEventListener('input', add);
+                function add() {
+
+                    var one = parseFloat(numOne.value) || 1;
+                    var two = parseFloat(numTwo.value) || 1;
+                    two = two / 100
+                    two *= two
+                    var bmi = one / two
+                    bmi = bmi.toFixed(2)
+                    addSum.innerText = bmi;
+                    if (bmi < 18) {
+                        document.getElementById("myImg").src = "images/thin.png";
+                        document.getElementById("calc").style.backgroundColor = "red";
+                    }
+                    else if (bmi > 24) {
+                        document.getElementById("myImg").src = "images/fat.png";
+                        document.getElementById("calc").style.backgroundColor = "red";
+
+                    }
+                }
+            }
+
+        </script>
+
+    </section>
+
+    <!-- BMI calculator section ends -->
+
+    <!-- GYM section starts  -->
+
+    <section class="service" id="service">
+
+        <h1 class="heading">GYM</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/img1.jpg" alt="">
+                <div class="info">
+                    <h3>treadmill</h3>
+                    <p>One of the most popular types of home exercise equipment is the treadmill, which provides a
+                        straightforward, efficient aerobic workout. For many, treadmills are a good choice to begin a
+                        new exercise routine because walking is well tolerated by most individuals regardless of fitness
+                        level and for most back conditions. </p>
+                    <a href="#"><button class="btn">more</button></a>
+                </div>
+            </div>
+
+
+
+            <div class="box">
+                <img src="images/img3.jpg" alt="">
+                <div class="info">
+                    <h3>trainer</h3>
+                    <p>A fitness trainer is someone who leads, instructs, and motivates individuals or groups in
+                        exercise activities, including cardiovascular exercise (exercises for the heart and blood
+                        system), strength training, and stretching. They work with people of all ages and skill levels.
+                    </p>
+                    <a href="#"><button class="btn">more</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/img4.jpg" alt="">
+                <div class="info">
+                    <h3>equipments</h3>
+                    <p>Exercise equipment is any apparatus or device used during physical activity to enhance the
+                        strength or conditioning effects of that exercise by providing either fixed or adjustable
+                        amounts of resistance, or to otherwise enhance the experience or outcome of an exercise routine.
+                    </p>
+                    <a href="#"><button class="btn">more</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/img5.jpg" alt="">
+                <div class="info">
+                    <h3>boxing</h3>
+                    <p>Fitness boxing is also a great aerobic exercise. Aerobic exercise gets your heart pumping and
+                        helps lower the risk of high blood pressure, heart disease, stroke, and diabetes. It can
+                        strengthen bones and muscles, burn more calories, and lift mood.</p>
+                    <a href="#"><button class="btn">more</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/img6.jpg" alt="">
+                <div class="info">
+                    <h3>weight lifting</h3>
+                    <p>weightlifting should be a good option for you. To get started, you will need a gym membership or
+                        a place at home to work out. ... This is a full body workout that you should do three times per
+                        week with a day of non-weightlifting in between.</p>
+                    <a href="#"><button class="btn">more</button></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GYM section ends -->
+
+    <!-- YOGA section starts  -->
+
+    <section class="service" id="trainer">
+
+        <h1 class="heading">YOGA</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/yoga1.jpeg" alt="">
+                <div class="info">
+                    <h3>Natarajasana</h3>
+                    <p> Lord of the Dance Pose[1] or Dancer Pose[2] is a standing, balancing, back-bending asana in
+                        modern yoga as exercise.[1] It is derived from a pose in the classical Indian dance form
+                        Bharatnatyam, which is depicted in temple statues in the Nataraja Temple, Chidambaram.
+
+                    </p>
+                    <a href="#"><button class="btn">more</button></a>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <img src="images/yoga2.jpeg" alt="">
+                <div class="info">
+                    <h3>Halasana</h3>
+                    <p> Plough pose is an inverted asana in hatha yoga and modern yoga as exercise. Its variations
+                        include Karnapidasana with the knees by the ears, and Supta Konasana with the feet wide apart..
+                    </p>
+                    <a href="#"><button class="btn">more</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/yoga3.jpeg" alt="">
+                <div class="info">
+                    <h3>Dandasana</h3>
+                    <p>The pose is not found in the medieval hatha yoga texts.[4] The 19th century Sritattvanidhi uses
+                        the name Dandasana for a different pose, the body held straight, supported by a rope.[4] The
+                        yoga scholar Norman Sjoman notes, however, that the traditional Indian Vyayama gymnastic
+                        exercises include a set of movements called "dands", similar to Surya Namaskar and to the
+                        vinyasas used in modern yoga.</p>
+                    <a href="#"><button class="btn">more</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/yoga4.jpeg" alt="">
+                <div class="info">
+                    <h3>Bhujangasana</h3>
+                    <p>Bhujangasana or Cobra Pose is a reclining back-bending asana in hatha yoga and modern yoga as
+                        exercise.[2] It is commonly performed in a cycle of asanas in Surya Namaskar (Salute to the Sun)
+                        as an alternative to Urdhva Mukha Svanasana (Upwards Dog Pose).</p>
+                    <a href="#"><button class="btn">more</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/yoga5.jpeg" alt="">
+                <div class="info">
+                    <h3>Balasana</h3>
+                    <p>Ananda Balasana or "Happy Baby Pose" is an inverted form of Child's Pose; it has the body on the
+                        back, the thighs alongside the body, the knees bent and the hands grasping the toes.</p>
+                    <a href="#"><button class="btn">more</button></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Yoga section ends -->
+
+    <!-- Diet Section Starts  -->
+    <section class="service" id="trainer">
+        <h1 class="heading">Diet Plan</h1>
+        <div class="container">
+            <div class="card card1">
+                <img src="images/Breakfast.jpeg" alt="">
+                <div class="content">
+                    <h1>Breakfast</h1>
+                    <p>peanut banana,Avocado toast,Overnight oats, sandwich
+                    <p>
+                </div>
+            </div>
+            <div class="card card2">
+                <img src="images/Launsh.jpeg" alt="">
+                <div class="content">
+                    <h1>Lunch</h1>
+                    <p>Detox Strawberry Chicken Salad,Chopped Salad With Chicken,Coconut Peanut Veggie Noodles </p>
+                </div>
+            </div>
+            <div class="card card3">
+                <img src="images/dinner.jpeg " alt="">
+                <div class="content">
+                    <h1>Dinner</h1>
+                    <p>Rooasted Veggie Pasta , Udon Noodle Soup ,Grilled Corn </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer section starts -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>online Inquiries</h4>
+                    <ul>
+                        <li><a href="#">Google</a></li>
+                        <li><a href="#">Play Store</a></li>
+                        <li><a href="#">App Store</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+
+
+
+
+
+
+
+
+
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

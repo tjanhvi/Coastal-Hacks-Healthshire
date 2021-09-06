@@ -1,1 +1,2 @@
-# Coastal-Hacks-Healthshire
+# Healthshire
+An all-round solution for you wellness
